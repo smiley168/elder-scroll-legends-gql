@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smiley168/elder-scroll-legends.git"
+    "url": "git+https://github.com/smiley168/elder-scroll-legends-gql.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/smiley168/elder-scroll-legends/issues"
+    "url": "https://github.com/smiley168/elder-scroll-legends-gql/issues"
   },
-  "homepage": "https://github.com/smiley168/elder-scroll-legends#readme",
+  "homepage": "https://github.com/smiley168/elder-scroll-legends-gql#readme",
   "dependencies": {
     "apollo-server": "^2.12.0",
     "graphql": "^14.0.0",
