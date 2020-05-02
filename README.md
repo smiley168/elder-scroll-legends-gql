@@ -1,2 +1,2 @@
-# elder-scroll-legends
+# elder-scroll-legends GraphQL server
 take-home exercise
