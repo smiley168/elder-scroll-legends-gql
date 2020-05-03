@@ -5,18 +5,11 @@ const _ = require("lodash");
 // Construct a schema, using GraphQL schema language
 const typeDefs = `
   type Query {
-    rates(currency: String!): [ExchangeRate]
     cards(pageSize: Int, name: String, pageNumber: Int): [CardInfo]
-  }
-
-	type ExchangeRate {
-		currency: String
-		rate: String
-		name: String
   }
   
   type CardInfo {
-		name: String
+	  name: String
     type: String
     setName: String
     text: String
@@ -61,13 +54,6 @@ const server = new ApolloServer({
   playground: true,
 });
 
-// server.listen().then(({ url }) => {
-//   console.log(`🚀 Server ready at ${url}`);
-// });
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
     console.log(`🚀 Server ready at ${url}`);
 });
-
-// server.listen(process.env.PORT || 4000, function(url){
-//     console.log(`🚀 Server ready at ${url}`);
-// });
