@@ -9,7 +9,7 @@ const typeDefs = `
   }
   
   type CardInfo {
-	  name: String
+    name: String
     type: String
     setName: String
     text: String
