@@ -15,7 +15,7 @@ https://docs.elderscrollslegends.io/
 https://docs.elderscrollslegends.io/#api_v1cards_list
 
 
-### Getting Started
+### Getting Started 
 
 #### Clone the repository
 
@@ -42,7 +42,7 @@ npm install
 
 Return all the cards from the https://api.elderscrollslegends.io/v1/cards endpoint
 
-`
+```
     query {
         cards {
             name
@@ -52,11 +52,11 @@ Return all the cards from the https://api.elderscrollslegends.io/v1/cards endpoi
             imageUrl
         } 
     }
-`
+```
 
 Search by name
 
-`
+```
     query {
         cards(name: "alduin") {
             name
@@ -66,13 +66,13 @@ Search by name
             imageUrl
         } 
     }
-`
+```
 
 Set a limit of results per result page to support pagination
 
 Example: request page 2 for 20 cards per page
 
-`
+```
     query {
         cards(pageSize: 20, pageNumber: 2) {
             name
@@ -82,9 +82,9 @@ Example: request page 2 for 20 cards per page
             imageUrl
         } 
     }
-`
+```
 
-`
+```
     query {
         cards(name: "dragon", pageSize: 20, pageNumber: 1) {
             name
@@ -94,7 +94,7 @@ Example: request page 2 for 20 cards per page
             imageUrl
         } 
     }
-`
+```
 
 
 #### How to deploy to Heroku
