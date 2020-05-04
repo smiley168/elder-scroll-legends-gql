@@ -29,6 +29,8 @@ const resolvers = {
           url += `?pageSize=${pageSize}&name=${name}`;
         } else if(name) {
           url += `?name=${name}`;
+        } else if(pageSize && pageNumber) {
+          url += `?pageSize=${pageSize}&page=${pageNumber}`;
         }
         const results = await fetch(url);
         const cardsData = await results.json();

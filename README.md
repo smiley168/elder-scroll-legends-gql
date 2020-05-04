@@ -27,7 +27,74 @@ npm install
 
 #### Start the GraphQL server locally
 
-npm run start
+1. npm run start
+
+1. Open http://localhost:4000 to view the GraphQL playground in the browser. 
+    1. A GraphQL playground is similar to an API console where you can play around with the supported GraphQL API endpoints.
+    1. You can click on the 'Doc' and 'Schema' tabs on the right hand side of the GraphQL playground to checkout the supported query and input types.
+
+1. When you make changes to the code running in development mode, you need to restart the server to see your changes.
+    1. Ctrl+C to exit
+    1. npm run start
+
+
+#### Currently supported Queries
+
+Return all the cards from the https://api.elderscrollslegends.io/v1/cards endpoint
+
+`
+    query {
+        cards {
+            name
+            type
+            setName
+            text
+            imageUrl
+        } 
+    }
+`
+
+Search by name
+
+`
+    query {
+        cards(name: "alduin") {
+            name
+            type
+            setName
+            text
+            imageUrl
+        } 
+    }
+`
+
+Set a limit of results per result page to support pagination
+
+Example: request page 2 for 20 cards per page
+
+`
+    query {
+        cards(pageSize: 20, pageNumber: 2) {
+            name
+            type
+            setName
+            text
+            imageUrl
+        } 
+    }
+`
+
+`
+    query {
+        cards(name: "dragon", pageSize: 20, pageNumber: 1) {
+            name
+            type
+            setName
+            text
+            imageUrl
+        } 
+    }
+`
 
 
 #### How to deploy to Heroku
