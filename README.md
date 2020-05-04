@@ -4,7 +4,7 @@ This is the GraphQL Server application for the web application at https://github
 
 #### PUBLIC API from Elder Scroll Legends
 
-#### Endpoint: 
+##### Endpoint: 
 
 https://api.elderscrollslegends.io/v1/cards
 
